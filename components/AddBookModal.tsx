@@ -13,7 +13,7 @@ const AddBookModal = ({ onAddBook }: { onAddBook: (book: Book) => void }) => {
     title: '',
     isbn: '',
     location: 'shelf',
-    ownerId: [],
+    ownerIds: [],
   });
   const [searchResults, setSearchResults] = useState<{ title: string; thumbnail: string; id: string }[]>([]);
 
@@ -46,23 +46,26 @@ const AddBookModal = ({ onAddBook }: { onAddBook: (book: Book) => void }) => {
       title: selectedBook.title,
       isbn: book.isbn,
       location: book.location,
-      ownerId: book.ownerId,
+      ownerIds: book.ownerIds,
+      id: selectedBook.id,
+      thumbnail: selectedBook.thumbnail
     });
     setSearchResults([]);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (book.title || book.isbn) {
-      onAddBook(book as Book);
-      setOpen(false);
-      setBook({ title: '', isbn: '', location: 'shelf', ownerId: [] });
-      setSearchResults([]);
-    } else {
-      alert('タイトルまたはISBNを入力してください。');
-    }
-  };
 
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  if (book.title || book.isbn) {
+    onAddBook({...book} as Book); //本を実際に追加
+    setOpen(false);
+    setBook({ title: '', isbn: '', location: 'shelf', ownerIds: [] }); //編集するための本の情報を初期化
+    setSearchResults([]);
+  } else {
+    alert('タイトルまたはISBNを入力してください。');
+  }
+};
 
   return (
     <>

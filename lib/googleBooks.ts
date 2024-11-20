@@ -13,12 +13,12 @@ export async function searchBooks(query: string, searchType: 'title' | 'isbn'): 
       return response.data.items.map((item) => ({
         id: item.id,
         title: item.volumeInfo.title,
-        authors: item.volumeInfo.authors || [],
+        authors: item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : '',  
         isbn: item.volumeInfo.industryIdentifiers?.find((id) => id.type === 'ISBN_13')?.identifier || 
               item.volumeInfo.industryIdentifiers?.find((id) => id.type === 'ISBN_10')?.identifier || 
               'N/A',
         location: 'shelf', // Default location
-        ownerId: [], // Default ownerId
+        ownerIds: [], // Default ownerId
         thumbnail: item.volumeInfo.imageLinks?.thumbnail || null,
       }));
     } else {

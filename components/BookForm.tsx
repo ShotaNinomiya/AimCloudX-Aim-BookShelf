@@ -32,8 +32,11 @@ const BookForm = ({ book, onChange }: BookFormProps) => {
         </FormControl>
         <TextField
           label="所有者ID"
-          value={book.ownerId}
-          onChange={(e) => onChange({ ...book, ownerId: e.target.value })}
+          value={book.ownerIds?.join(', ')}
+          onChange={(e) => {
+            const updateOwenersIds = e.target.value.split(',').map((id) => id.trim());
+            onChange({ ...book, ownerIds: updateOwenersIds })
+          }}
           fullWidth
         />
       </div>

@@ -6,7 +6,7 @@ import AddBookModal  from '../components/AddBookModal'
 import { Book } from '../lib/types'
 import Pagination from '../components/Pagination';
 
-export default function Home() {
+const App = () => {
   const [books, setBooks] = useState<Book[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const booksPerPage = 10;
@@ -18,7 +18,6 @@ export default function Home() {
     (currentPage -1) * booksPerPage,
     currentPage * booksPerPage
   );
-
 
   // BookList用のメソッド: 本の削除
   const handleBookDelete = (id: string) => {
@@ -35,28 +34,22 @@ export default function Home() {
       if (existingBookIndex !== -1) {
         // 既存の本がある場合
         const updatedBooks = [...prevBooks];
-        const existingBook = updatedBooks[existingBookIndex];
-        
-        // ownerIdが配列であることを確認する
-        const ownerIds = Array.isArray(newBook.ownerId) ? newBook.ownerId : [newBook.ownerId]; // 修正: 配列でない場合は配列に変換
-  
+        const existingBook = updatedBooks[existingBookIndex]; //existingBookIndex番目を取得
+
         // 重複しない場合のみ、所有者IDを追加
-        ownerIds.forEach((ownerId) => {
-          if (!existingBook.ownerId.includes(ownerId)) {
-            existingBook.ownerId.push(ownerId);
+        newBook.ownerIds.forEach((ownerId) => {
+          if (!existingBook.ownerIds.includes(ownerId)) {
+            existingBook.ownerIds.push(ownerId);
           }
         });
   
         return updatedBooks;
       } else {
         // 新規の本を追加
-        return [...prevBooks, { ...newBook, owners: Array.isArray(newBook.ownerId) ? newBook.ownerId : [newBook.ownerId] }]; // 修正: 配列に変換
+        return [...prevBooks, newBook ]; //prevBooks = [{title: xxx, isbn:...}]
       }
     });
   };
-  
-
-
 
 
   return (
@@ -78,3 +71,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default App;

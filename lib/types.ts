@@ -2,10 +2,10 @@
 export interface Book {
     id: string;
     title: string;
-    authors: string[];
+    authors: string;
     isbn: string;
     location: 'shelf' | 'owner';
-    ownerId: string[];
+    ownerIds: string[];
     thumbnail: string | null;
   }
 
