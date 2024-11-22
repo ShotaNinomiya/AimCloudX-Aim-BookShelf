@@ -1,0 +1,86 @@
+{
+  "books": [
+    {
+      "id": "735a",
+      "title": "日本鉄道車輌工業史",
+      "authors": [
+        "沢井実"
+      ],
+      "isbn": "あああ",
+      "thumbnail": "http://books.google.com/books/content?id=w_61AAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "location": "bookshelf"
+    },
+    {
+      "id": "fb91",
+      "title": "React.js 超入門",
+      "authors": [
+        "掌田津耶乃"
+      ],
+      "isbn": "",
+      "thumbnail": "http://books.google.com/books/content?id=Cq8pEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "location": "bookshelf"
+    },
+    {
+      "id": "5a6a",
+      "title": "Complete Communication Book 2 – Intermediate – / コミュニケーションのための実践演習 Book 2 〈中級編〉",
+      "authors": [
+        "James Bury",
+        "Anthony Sellick",
+        "堀内香織"
+      ],
+      "isbn": "9784791972425",
+      "thumbnail": "http://books.google.com/books/content?id=t-65zgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "location": "owner"
+    },
+    {
+      "id": "ab00",
+      "title": "Next.js超入門",
+      "authors": [
+        "掌田津耶乃"
+      ],
+      "isbn": "",
+      "thumbnail": "http://books.google.com/books/content?id=80TxEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "location": "bookshelf"
+    },
+    {
+      "id": "09c3",
+      "title": "ISBN - Internationale Standard-Buchnummer",
+      "authors": [
+        " Walravens, Hartmut"
+      ],
+      "isbn": "9783940862211",
+      "thumbnail": "http://books.google.com/books/content?id=i1lrYuczMUMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "location": "bookshelf"
+    },
+    {
+      "id": "5098",
+      "title": "Livres de France",
+      "isbn": "",
+      "thumbnail": "http://books.google.com/books/content?id=q8gkAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "location": "owner"
+    },
+    {
+      "id": "b72b",
+      "title": "世界のねこ",
+      "authors": [
+        "ジェニファー・プリング"
+      ],
+      "isbn": "9784861527333",
+      "thumbnail": "http://books.google.com/books/content?id=XLnOxgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "location": "bookshelf",
+      "ownerId": "あｓｄｆ"
+    },
+    {
+      "id": "8f04",
+      "title": "ときめく猫図鑑",
+      "authors": [
+        "なかのひろみ",
+        "福田豊文"
+      ],
+      "isbn": "9784635049474",
+      "thumbnail": "http://books.google.com/books/content?id=JxyczwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "location": "owner",
+      "ownerId": "ひらの"
+    }
+  ]
+}
