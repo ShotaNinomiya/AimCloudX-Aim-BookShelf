@@ -1,0 +1,6 @@
+version: 0.2
+
+phases:
+	post_build:
+		commands:
+			- aws s3 sync --exact-timestamps --delete ./ s3://aimcloudx-bookshelf-s3
